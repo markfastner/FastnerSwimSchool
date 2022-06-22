@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  background-color: lightblue;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://fastnerswim.w3spaces.com/Reev_sitting_2.jpg?bypass-cache=78258946");
+  min-height: 100%;
+}
+
+h1 {
+  font-size: 140px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 70px;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+</head>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-blue w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container " id="home">
+  <div class="w3-display-center w3-text-white" style="padding:100px">
+    <span class="w3-cursive w3-jumbo "><h1>Fastner's Swim School</h1></span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters!</span><br>
+    <span class="w3-cursive w3-large"><h2>SAFE!  FUN!  FAST!</h2></span>
+    <p><a href="#about" class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+<!-- About Section -->
+
+
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">ABOUT US!</h3>
+  <p class="w3-center w3-large">Our mission at Fastner Swim School is to provide a high level of swim education through private swim lessons at an affordable price for all. We teach any age and have specialized instructors for each age group. Our instructors consist of veteran swimmers who have been trained by the best and are passionate about what they do. Where the swim lessons are conducted depend on what is most convenient for you. We are able to drive to your home to conduct the lessons or can find an alternate pool that works for everyone. Please read below to get more information about our instructors, our work, and our pricing. You can find our contact information at the bottom. Please dont hesitate to reach out to get started with swim lessons or if you have any questions. Thank You!
+
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <img src="https://fastnerswim.w3spaces.com/lifejacket.jpeg?bypass-cache=81806001" alt="Safe" style="width:150px;height:150px;">
+      <p class="w3-large">Safe</p>
+      <p>The top priority for us at Fastner Swim School is safety. We conduct all our lessons with care to prevent injury and train our swimmers to be safe in the water. All our instructors are COVID Vacinated! </p>
+    </div>
+
+    <div class="w3-quarter">
+      <img src="https://fastnerswim.w3spaces.com/fun.jpg?bypass-cache=81020859" alt="Fun" style="width:150px;height:150px;">
+      <p class="w3-large">Fun</p>
+      <p>We do our best to make each lessons fun for our swimmers to reward hard work in the water and to provide the best experience!</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://fastnerswim.w3spaces.com/dolphin.jpg?bypass-cache=81806002" alt="Fast" style="width:150px;height:150px;">
+      <p class="w3-large">Fast</p>
+      <p>Our aim is to make better swimmers by educating on proper swimming techniques!</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Support</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Team Section -->
+<div class="w3-container w3-aqua"  style="padding:128px 16px" id="team">
+  <h3 class="w3-center">MEET OUR TEAM</h3>
+  <p class="w3-center w3-large">Our team consists of trained, passionate, and experienced swim instructors who are ready to meet your needs </p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://fastnerswim.w3spaces.com/me.jpg?bypass-cache=84995677" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>Mark Fastner</h3>
+          <p class="w3-opacity">Founder and Head Instructor</p>
+          <p>My name is Mark Fasner and I am the founder of Fastner's Swim School. I am a college student who has been an active swimmer all my life and have ammased nearly two decades worth of swimming experience. I competed as a club swimmer as well as in high school and developed a passion for swimming. I am now taking my passion to the next level in my mission to educate children of all ages and setting them on the right path to become a strong swimmer. I have 2 years of exeprience teaching children and adults of all ages. I love working with kids and am passionate for what I do.</p>
+          <p><button class="w3-button w3-light-grey w3-block" onclick="alert('email markfastner@hotmail.com phone: 858-231-9209')"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://fastnerswim.w3spaces.com/andrew_with_kids.jpg?bypass-cache=61784278" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Andrew Ho</h3>
+          <p class="w3-opacity">swim style expert</p>
+          <p>My name is Andrew Ho and I have been swimming for as long as I can remember. I have been instructing swim lessons for the last 2 years and specialize on teaching the four traditional swimming styles; freestyle, backstroke, breaststroke, and butterfly. I usually work with kids ages 7 and up and look forward to working with your child to turn them into a strong swimmer. </p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Madi Heidemann</h3>
+          <p class="w3-opacity">baby and todler instructor</p>
+          <p>Hi my name is Madi and I specialize teaching swim lessons with babies and young todlers between the age of 1-4. I have lots of experience working with children as I worked at ESS for 4 years. I adore young babies and todlers and will get them comfortable in the water and build up the foundation necessary to get them swimming.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
+        <div class="w3-container">
+          <h3>Dan Star</h3>
+          <p class="w3-opacity">Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-blue w3-padding-64">
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">100+</span>
+    <br>new Swimmers
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">100+</span>
+    <br>Happy Parents
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">1000+</span>
+    <br>Lessons Given
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">0</span>
+    <br>kids have sunk
+  </div>
+</div>
+
+<!-- Work Section -->
+<div class="w3-container w3-teal" style="padding:128px 16px" id="work">
+  <h3 class="w3-center w3-xxxlarge">OUR WORK</h3>
+  <p class="w3-center w3-large">Feedback from our happy swimmers</p>
+
+<h3>Hover over the image below:</h3>
+
+<div class="row">
+  <div class="column">
+<div class="flip-card" style="margin-center:64px" style="float: left">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://fastnerswim.w3spaces.com/kiaan.jpg?bypass-cache=63075821" alt="Avatar" style="width:500px;height:500px;">
+    </div>
+    <div class="flip-card-back">
+      <h2>Kiaan</h2> 
+      <p>age: 5</p> 
+      <p>Kiaan started doing lessons with Mark at the beggining of the summer. At first Kiaan was scared of going to the deep water and loved the wall. With Mark, Kiaan learned how to properly push of the wall and challenge what he thought he couldnt do. Kiaan has learned how to do proper kicks and scoops as well as well as how to get onto his back and float for 10 seconds. Every lesson Kiaan becomes more comfortable in the water and develops new skills.
+    </div>
+  </div>
+  </div>
+</div>
+  <div class="column">
+<div class="flip-card style="float: right"">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://fastnerswim.w3spaces.com/Reev_jumping.jpg?bypass-cache=63456639" alt="Avatar" style="width:500px;height:500px;">
+    </div>
+    <div class="flip-card-back">
+      <h2>Reev</h2> 
+      <p>age: 5</p> 
+      <p>Reev is an energic boy who has been doing lesson with Mark since last Summer. When Reev first started he was afraid of the water and adametly refused to put his face in, even with gogles. Through consisten lesson last Summer Reev has accomplished so much. Today he actively jumps into the water to show of what he learned. Reev now dives down to the bottom of the pool unassisted to get rings that would have seemed impossible to get for him last summer. Reev has also gotten rid of the bad habits he had previously developed and now does proper kicks and scoops. Reev is now transitioning from swimming fundamentals and is starting to learn freestyle.   </p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+      <div class="column">
+        <div class="flip-card style="float: left"">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://upfind.me/wp-content/uploads/2020/01/flower-science-activities-Bella-759x1024.jpg" alt="Avatar" style="width:500px;height:500px;">
+            </div>
+              <div class="flip-card-back">
+              <h1>Sue Bird</h1> 
+              <p>age: 7</p> 
+              <p>blah blah blah</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="flip-card style="float: left"">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://upfind.me/wp-content/uploads/2020/01/flower-science-activities-Bella-759x1024.jpg" alt="Avatar" style="width:500px;height:500px;">
+            </div>
+              <div class="flip-card-back">
+              <h1>Sue Bird</h1> 
+              <p>age: 7</p> 
+              <p>blah blah blah</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+
+<!-- Pricing Section -->
+<div class="w3-container w3-center w3-blue" style="padding:128px 16px" id="pricing">
+  <h3>PRICING</h3>
+  <p class="w3-large">Find your desired lesson duration and price per lesson. Save money by purchasing a 5 or 10 pack!</p>
+  <p class="w3-small">Please note that a 10$ driving fee will be added to each lesson if instrucor drives to accomade. If instructors need to drive more than 15 minutes to accomadate a lesson additional fees will apply.</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">15 Minute Lessons 
+          <p class = "w3-small"> (best for kids under 4 years old)</p>
+        </li>
+        <li class="w3-padding-16">
+          <b class = "w3-red w3-padding-large">25$ per lesson!</b>
+        </li>
+        <li class="w3-padding-16"><b>5 package</b> 115$</li>
+        <li class="w3-padding-16"><b>10 package</b> 225$</li> 
+        
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-red w3-xlarge w3-padding-48">30 Minute Lessons
+          <p class = "w3-small"> (best for most kids)</p>
+        </li>
+        <li class="w3-padding-16">
+          <b class = "w3-red w3-padding-large">35$ per lesson</b>
+        </li>
+        <li class="w3-padding-16"><b>5 package</b> 165$</li>
+        <li class="w3-padding-16"><b>10 package</b> 315$</li> 
+        
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">60 Minute Lessons
+          <p class = "w3-small"> (best for older kids)</p>
+        </li>
+        <li class="w3-padding-16">
+          <b class = "w3-red w3-padding-large">70$ per lesson</b>
+        </li>
+        <li class="w3-padding-16"><b>5 package</b> 315$</li>
+        <li class="w3-padding-16"><b>10 package</b> 630$</li> 
+        
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-container w3-aquamarine" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">Getting started</h3>
+  <p class="w3-large">To start swim lessons with Fastner Swim School please reach out to us and we will work together to find the optimal plan for your child. You can reach out by email, text, or phone and we will get back to you as soon as possible. </p>
+
+  <p class="w3-large">Before the first lesson please fill out the release of liability form below</p>
+
+  <p> <a href="file:///C:/Users/markf/Downloads/Fastner's-Swim-School-waiver_fillable.pdf">Agreement to Participate
+With Assumption of Risk, Waiver and Release of Liability</a>.</p>
+
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Carmel Mountain, 4s Ranch, Poway, Rancho Bernardo, Mount Carmel</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 858-231-9209</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: fastnerswimming@gmail.com</p>
+    <br>
+    
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<script>
+
+  
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</html>
