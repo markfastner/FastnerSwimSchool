@@ -103,6 +103,18 @@ h2 {
   flex-wrap: wrap;
 }
   
+  .holdingcontainer{
+    width: 100%;
+    display: flex;
+    background: #ffc728;
+    padding: 50px;
+  }
+  
+  .internalcontainer{
+    flex: 1;
+    background: cyan;
+    
+  
   </style>
 
 </head>
@@ -259,16 +271,14 @@ h2 {
 
 <h3>Hover over the image below:</h3>
 
- <ul class="flex-container nowrap">
+ <div class = "holdingcontainer">
+   <div class = "internalcontainer">
 <div class="row">
   <div class="column">
 <div class="flip-card" style="margin-center:64px" style="float: left">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img max-width: 100%;
-    height: auto;
-    width: auto; 
-           src="https://raw.githubusercontent.com/markfastner/FastnerSwimSchool/main/kiaan.jpg" style="width:100%">
+      <img src="https://raw.githubusercontent.com/markfastner/FastnerSwimSchool/main/kiaan.jpg" style="width:100%">
     </div>
     <div class="flip-card-back">
       <h2>Kiaan</h2> 
@@ -278,6 +288,8 @@ h2 {
   </div>
   </div>
 </div>
+     </div>
+     <div class = "internalcontainer">
   <div class="column">
 <div class="flip-card style="float: right"">
   <div class="flip-card-inner">
@@ -293,7 +305,9 @@ h2 {
   </div>
 </div>
 </div>
+     </div>
   
+     <div class = "internalcontainer">
       <div class="column">
         <div class="flip-card style="float: left"">
           <div class="flip-card-inner">
@@ -308,6 +322,7 @@ h2 {
           </div>
         </div>
       </div>
+   </div>
       
     </div>
 </ul>
